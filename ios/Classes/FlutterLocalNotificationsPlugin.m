@@ -72,18 +72,18 @@ typedef NS_ENUM(NSInteger, RepeatInterval) {
 
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-    channel = [FlutterMethodChannel
-               methodChannelWithName:CHANNEL
-               binaryMessenger:[registrar messenger]];
-    persistentState = [NSUserDefaults standardUserDefaults];
-    FlutterLocalNotificationsPlugin* instance = [[FlutterLocalNotificationsPlugin alloc] init];
+//     channel = [FlutterMethodChannel
+//                methodChannelWithName:CHANNEL
+//                binaryMessenger:[registrar messenger]];
+//     persistentState = [NSUserDefaults standardUserDefaults];
+//     FlutterLocalNotificationsPlugin* instance = [[FlutterLocalNotificationsPlugin alloc] init];
 //     if(@available(iOS 10.0, *)) {
 //         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
 //         center.delegate = instance;
 //     }
-    [registrar addApplicationDelegate:instance];
-    [registrar addMethodCallDelegate:instance channel:channel];
-    _registrar = registrar;
+//     [registrar addApplicationDelegate:instance];
+//     [registrar addMethodCallDelegate:instance channel:channel];
+//     _registrar = registrar;
 }
 
 - (void)pendingNotificationRequests:(FlutterResult _Nonnull)result {
